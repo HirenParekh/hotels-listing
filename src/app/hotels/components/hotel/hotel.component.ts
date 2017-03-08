@@ -12,4 +12,12 @@ import {Hotel} from "../../models/hotel.model";
 export class HotelComponent{
   @Input()
   hotel:Hotel;
+  isExpanded:boolean;
+  selected:boolean;
+  toggleSelection(){
+    this.selected = !this.selected;
+  }
+  showMoreInfo(){
+    this.isExpanded = !this.isExpanded;
+  }
 }

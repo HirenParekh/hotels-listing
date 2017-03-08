@@ -1,7 +1,12 @@
-<div>
-  <span id="hotel-title">{{hotel.name}}</span>
-  <span class="right">'stars - '{{hotel.star}}</span>
-  <div class="room-container" *ngFor="let room of hotel.rooms">
+<div class="hotel-container">
+  <div (click)="toggleSelection()">
+    <div [class.selected]="selected"></div>
+    <span id="hotel-title">{{hotel.name}}</span>
+    <span class="right">stars - {{hotel.star}}</span>
+  </div>
+  <div class="room-container"
+       *ngFor="let room of hotel.rooms;let i = index"
+       [class.hidden]="!isExpanded && i >= 3">
     <div class="room-title">{{room.name}}<span class="right">{{room.price}}</span></div>
     <div>
       <span class="sub-title" *ngFor="let service of room.services;let isLast = last">
@@ -9,4 +14,9 @@
       </span>
     </div>
   </div>
+  <div *ngIf="hotel?.rooms?.length > 3" id="more-info-btn">
+    <span *ngIf="!isExpanded" (click)="showMoreInfo()">show more</span>
+    <span *ngIf="isExpanded" (click)="showMoreInfo()">show less</span>
+  </div>
+  <div class="clear"></div>
 </div>

@@ -1,25 +1,57 @@
-li{
+.hotel-container{
+  margin: 10px 15px 20px 15px;
+}
+
+li {
   list-style: none;
 }
-#hotel-title{
+
+#hotel-title {
   font-size: 16px;
   font-weight: bold;
   padding: 10px 0;
+  cursor: pointer;
 }
-.right{
+
+.right {
   float: right;
 }
-.room-container{
+
+.room-container {
   border: 1px #CCCCCC solid;
   background-color: #FFFFFF;
   padding: 15px 20px;
-  margin: 15px 0;
+  margin: 5px 0;
 }
-.room-title{
+
+.room-title {
   font-size: 16px;
   margin-bottom: 5px;
 }
-.sub-title{
+
+.sub-title {
   font-size: 13px;
   color: #999999;
+}
+
+.selected {
+  display: inline-block;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  background-color: #00b0ff;
+  margin-right: 10px;
+  margin-left: -22px;
+}
+
+.hidden{
+  display: none;
+}
+
+#more-info-btn{
+  color: #00b0ff;
+  float: right;
+}
+.clear{
+  clear: both;
 }
