@@ -10,6 +10,10 @@ import {Hotel} from "../../models/hotel.model";
   styleUrls: ['./hotel-list.component.css']
 })
 export class HotelListComponent {
+
+  searchStr:string = "";
+
   @Input()
   hotels:Hotel[];
+
 }

@@ -1,3 +1,15 @@
 <div>
-  <hotel *ngFor="let hotel of hotels" [hotel]="hotel"></hotel>
+  <div id="search-box-container">
+    <div>
+      <form>
+        <md-input-container id="search-box">
+          <input mdInput placeholder="Search Hotels" name="searchBox" [(ngModel)]="searchStr">
+        </md-input-container>
+      </form>
+    </div>
+    <span id="search-icon"><md-icon>search</md-icon></span>
+  </div>
+  <div>
+    <hotel *ngFor="let hotel of hotels | filter:['name']:searchStr" [hotel]="hotel"></hotel>
+  </div>
 </div>

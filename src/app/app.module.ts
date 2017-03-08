@@ -9,13 +9,15 @@ import {HotelsPageComponent} from "./hotels/components/hotels-page.component";
 import {HotelService} from "./hotels/services/hotel.service";
 import {HotelListComponent} from "./hotels/components/hotel-list/hotel-list.component";
 import {HotelComponent} from "./hotels/components/hotel/hotel.component";
+import {FilterPipe} from "./ng-pipes/filter.pipe";
 
 @NgModule({
   declarations: [
     AppComponent,
     HotelsPageComponent,
     HotelListComponent,
-    HotelComponent
+    HotelComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
