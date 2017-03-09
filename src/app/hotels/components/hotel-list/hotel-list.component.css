@@ -6,7 +6,7 @@
   width: 100%;
   margin: 0 ;
 }
-#search-icon{
+.search-icon{
   color: #CCCCCC;
   position: fixed;
   right: 10px;

@@ -10,6 +10,7 @@ import {HotelService} from "./hotels/services/hotel.service";
 import {HotelListComponent} from "./hotels/components/hotel-list/hotel-list.component";
 import {HotelComponent} from "./hotels/components/hotel/hotel.component";
 import {FilterPipe} from "./ng-pipes/filter.pipe";
+import {RatingDirective} from "./ng-directives/rating.directive";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {FilterPipe} from "./ng-pipes/filter.pipe";
     HotelsPageComponent,
     HotelListComponent,
     HotelComponent,
-    FilterPipe
+    FilterPipe,
+    RatingDirective
   ],
   imports: [
     BrowserModule,

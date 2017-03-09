@@ -2,12 +2,12 @@
   <div (click)="toggleSelection()">
     <div [class.selected]="selected"></div>
     <span id="hotel-title">{{hotel.name}}</span>
-    <span class="right">stars - {{hotel.star}}</span>
+    <span class="right" [rating]="hotel.star"></span>
   </div>
   <div class="room-container"
        *ngFor="let room of hotel.rooms;let i = index"
        [class.hidden]="!isExpanded && i >= 3">
-    <div class="room-title">{{room.name}}<span class="right">{{room.price}}</span></div>
+    <div class="room-title">{{room.name}}<span class="right">{{room.price | number:'3.0-0'}}</span></div>
     <div>
       <span class="sub-title" *ngFor="let service of room.services;let isLast = last">
           {{ service }}<span *ngIf="!isLast">,</span>

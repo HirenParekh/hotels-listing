@@ -8,7 +8,7 @@ import {Observable} from "rxjs/Rx";
 export class HotelService {
   private _hotels:Hotel[] = [
     {
-      name: "ABC",
+      name: "Hilton Hawaiian Village",
       star: 4,
       rooms: [
         {name: "Deluxe", price: 25000, services: ['Break fast', 'Lunch', 'Dinner']},
@@ -19,7 +19,7 @@ export class HotelService {
       ]
     },
     {
-      name: "JKL",
+      name: "Atlantis Paradise Island",
       star: 3,
       rooms: [
         {name: "Regular", price: 10000, services: []},
@@ -27,7 +27,7 @@ export class HotelService {
       ]
     },
     {
-      name: "PQR",
+      name: "Cosmopolitan of Las Vegas",
       star: 5,
       rooms: [
         {name: "Semi Deluxe", price: 15000, services: ['Break fast']},
@@ -35,7 +35,7 @@ export class HotelService {
       ]
     },
     {
-      name: "LMN",
+      name: "	Disney's Pop Century Resort",
       star: 2,
       rooms: [
         {name: "Semi Deluxe", price: 15000, services: ['Break fast']},
@@ -46,7 +46,7 @@ export class HotelService {
       ]
     },
     {
-      name: "XYZ",
+      name: "Planet Hollywood Resort and Casino",
       star: 1,
       rooms: [
         {name: "Spacial", price: 60000, services: ['Break fast', 'Lunch']}

@@ -8,11 +8,14 @@ import {PipeTransform, Pipe} from "@angular/core";
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(items: any[], fields: string[], value: string) {
+  transform(items: any[], fields: string[], value: string,result:{searchCount:number,totalCount:number}) {
     if (!items)
       return [];
     if (!value)
       value = "";
+    result.searchCount = 0;
+    result.totalCount = 0;
+    result.totalCount = items.length;
     return items.filter(
       currItem => {
         let flag: boolean;
@@ -20,6 +23,7 @@ export class FilterPipe implements PipeTransform {
           if (currItem.hasOwnProperty(field)) {
             if (currItem[field] && (currItem[field].toLowerCase().indexOf(value.toLowerCase()) > -1)) {
               flag = true;
+              result.searchCount++;
               return;
             }
           }

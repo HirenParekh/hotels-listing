@@ -7,9 +7,15 @@
         </md-input-container>
       </form>
     </div>
-    <span id="search-icon"><md-icon>search</md-icon></span>
+    <div class="search-icon">
+      <span><md-icon>{{searchResultInfo.searchCount}}/{{searchResultInfo.totalCount}}</md-icon></span>
+      <span><md-icon>search</md-icon></span>
+    </div>
   </div>
-  <div>
-    <hotel *ngFor="let hotel of hotels | filter:['name']:searchStr" [hotel]="hotel"></hotel>
+  <div *ngIf="searchResultInfo.searchCount > 0">
+    <hotel *ngFor="let hotel of hotels | filter:['name']:searchStr:searchResultInfo" [hotel]="hotel"></hotel>
+  </div>
+  <div *ngIf="searchResultInfo.searchCount == 0">
+    <span>Sorry we could not find any items matching your search</span>
   </div>
 </div>

@@ -12,6 +12,7 @@ import {Hotel} from "../../models/hotel.model";
 export class HotelListComponent {
 
   searchStr:string = "";
+  searchResultInfo:{searchCount:number,totalCount:number} = {searchCount:0,totalCount:0};
 
   @Input()
   hotels:Hotel[];
